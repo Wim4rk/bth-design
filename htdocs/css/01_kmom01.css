@@ -1,0 +1,72 @@
+/*!
+ * Stylesheet for design kmom01.
+ *
+ * This stylesheet is for the design course and kmom01. Fill it with style
+ * to style up the website so it is useable.
+ */
+
+
+/* Hide submenu, leave this to kmom02 */
+.rm-desktop ul {
+    display: none;
+}
+
+/* Hide responsive/mobile menu, leave this to kmom02 */
+.rm-navbar-max {
+    display: none;
+}
+
+html {
+    background: url("parch-high.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-color: #fce9c9;
+    color: #410e0c;
+}
+
+body {
+    width: 800px;
+    margin: auto;
+}
+
+ul.my-navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fbe9c1;
+    border: 2px solid #410e0c;
+}
+
+ul.my-navbar li {
+    float: left;
+    border-right: 1px solid #410e0c;
+}
+
+ul.my-navbar li:last-child {
+    border-right: none;
+}
+
+ul.my-navbar a {
+    display: block;
+    padding: 1em;
+    text-align: center;
+    background-color: #cd9250;
+}
+
+ul.my-navbar a:hover {
+    background-color: #8a572e;
+}
+
+figure {
+    float: right;
+}
+
+figure img {
+    border: 2px solid #410e0c;
+}
+
+.footer-column {
+    float: left;
+    display: block;
+    padding: 1em;
+}

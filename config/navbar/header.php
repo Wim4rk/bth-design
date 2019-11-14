@@ -34,6 +34,11 @@ return [
             ],
         ],
         [
+            "text" => "Lek",
+            "url" => "filosofi",
+            "title" => "Tankar, idéer och inspiration.",
+        ],
+        [
             "text" => "Om",
             "url" => "om",
             "title" => "Om denna webbplats.",
