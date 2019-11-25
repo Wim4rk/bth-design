@@ -75,7 +75,6 @@ figure img {
 }
 
 .footer-column {
+    width: 33%;
     float: left;
-    display: block;
-    padding: 1em;
 }

@@ -34,7 +34,7 @@ return [
             ],
         ],
         [
-            "text" => "Lek",
+            "text" => "Filosofi",
             "url" => "filosofi",
             "title" => "Tankar, idéer och inspiration.",
         ],

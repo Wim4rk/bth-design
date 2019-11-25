@@ -1,3 +1,4 @@
-#### Footer col 3
+#### Helt vilse...
 
-Med brödtext i ett stycke som säger något trevligt om just detta block, eller kanske en lista av länkar.
+Det är vansinnigt besvärligt att finna vara alla regioner kan redigeras. Och det
+är ännu svårare att finna var de kan stylas.
