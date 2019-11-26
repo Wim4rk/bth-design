@@ -1,3 +1,3 @@
-#### Footer col 1
+####Kontakta mig 
 
-Kanske kan jag skriva något eget på den här platsen.
+Lite mejladresser och annat som jag inte vill få spindelskördat...

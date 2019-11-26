@@ -1,3 +1,7 @@
-#### Footer col 2
+####Orientering
 
-Med brödtext i ett stycke som säger något trevligt om just detta block, eller kanske en lista av länkar.
+Här kan man länka runt till det viktigaste på sidan:
+
+* Butiken
+* Senaste nytt
+* Info för investerare

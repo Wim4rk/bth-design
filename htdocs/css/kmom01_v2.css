@@ -1,18 +1,15 @@
 /*!
- * LESS version of the stylesheet for design kmom01.
+ * Kmom01_v2 
  *
- * This stylesheet is for the design course and kmom01. Its intention is to
- * use kmom01.css and lessify the style and use this as a wrapper for the new
- * style.
+ * This stylesheet is a LESS version of Kmom01.css.
  */
 /**
  * Internal self contained modules, save in directory module/.
  */
-/*!
- * Stylesheet for design kmom01.
+/*
+ * __Kmom01__
  *
- * This stylesheet is for the design course and kmom01. Fill it with style
- * to style up the website so it is useable.
+ * Stylesheet for kmom01.
  */
 .site-logo {
   display: none;
@@ -97,26 +94,6 @@ body {
  * and other regions of the page including route specific styles.
  */
 /**
- * Layout style for general structure of header, navbar, main, footer
- * and other regions of the page including route specific styles.
- */
-/**
- * Variables
- */
-/**
- * General layout
- */
-.inner-wrap {
-  max-width: 800px;
-  margin: 0 auto;
-}
-.region-header-col-1 {
-  display: none;
-}
-.region-header-col-3 {
-  display: none;
-}
-/**
  * Layout for responsive style through media queries.
  */
 @media screen and (max-width: 1500px) {
@@ -161,4 +138,14 @@ body {
 html {
   background: url("parch-high.jpg") no-repeat center center fixed;
   background-size: cover;
+}
+body {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.region-header-col-1 {
+  display: none;
+}
+.region-header-col-3 {
+  display: none;
 }

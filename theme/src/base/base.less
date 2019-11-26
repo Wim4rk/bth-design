@@ -1,11 +1,6 @@
 /**
  * Base style to affect HTML elements on a general scale.
  */
-//@bgColorHtml: #424242;
-@bgColorHtml: #fce9c9;
-@bgColorBody: #410e0c;
-@colorBody: #410e0c;
-@fontFamilyBody: serif;
 
 html {
     overflow-y: scroll;
@@ -13,9 +8,47 @@ html {
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    color: @colorBody;
-    // background-color: @bgColorBody;
+    margin: 0 auto;
+    padding: 1em;
+    color: @bodyColor;
     font: 100.01%/1 @fontFamilyBody;
+    border: 2px solid @lineColor;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:link {
+    color: @bodyColor;
+}
+
+a:visited {
+    color: @lineColor;
+}
+
+a:hover {
+    background-color: @textContrast;
+}
+
+.region-main {
+	padding: 1em;
+}
+
+.site-footer {
+	padding: 1em;
+}
+
+.footer-column-x {
+	border: 1px solid @lineColor;
+	margin: 1em 0.5em;
+	padding: 0 1em;
+}
+
+.footer-column-1 {
+	margin-left: 1em;
+}
+
+.footer-column-3 {
+	margin-right: 1em;
 }
