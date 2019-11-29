@@ -6,6 +6,13 @@
  * And now we're using LESS, which is more.
  */
 /**
+ * Import mixins.
+ */
+/**
+ * A small clearfix:
+ * http://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use
+ */
+/**
  * Normalize style.
  */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -328,6 +335,234 @@ template {
 /**
  * Style
  */
+/**
+ * A responsive menu.
+ */
+/**
+ * Style for responsive menu
+ */
+/**
+ * Outer wrapper for menu
+ */
+.rm-navbar {
+  position: relative;
+}
+.rm-navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/**
+ * Avoid scrolling mobile devices
+ * OBSOLETE?
+ */
+/**
+ * Meny layout for the small buttonized menu.
+ */
+.rm-small {
+  display: none;
+  float: right;
+}
+a.rm-button {
+  display: inline-block;
+  color: inherit;
+  background-color: transparent;
+  outline: none;
+}
+a.rm-button:active {
+  color: inherit;
+  background-color: transparent;
+}
+a.rm-button .rm-button-face-1 {
+  position: absolute;
+  transition: color 0.1s ease;
+}
+a.rm-button .rm-button-face-2 {
+  position: relative;
+  color: transparent;
+  transition: color 0.1s ease;
+}
+a.rm-button.rm-clicked {
+  color: #9FB129;
+  background-color: transparent;
+}
+a.rm-button.rm-clicked .rm-button-face-1 {
+  color: transparent;
+}
+a.rm-button.rm-clicked .rm-button-face-2 {
+  z-index: 2;
+  color: inherit;
+}
+/**
+ * Standard meny layout, valid for any subtype.
+ */
+.rm-default li {
+  display: inline-block;
+}
+.rm-default li li {
+  display: block;
+  min-width: 10em;
+}
+.rm-default a {
+  display: block;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 1em;
+  outline: none;
+}
+.rm-default ul {
+  position: absolute;
+  z-index: 9999;
+  left: -9999px;
+}
+.rm-default ul.rm-show-submenu {
+  left: 0;
+}
+.rm-default ul li {
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
+}
+.rm-default ul ul {
+  left: -9999px;
+}
+/**
+ * Menu layout for the desktop variant, usually full width of browser.
+ */
+.rm-desktop ul {
+  background-color: inherit;
+}
+.rm-desktop li {
+  position: relative;
+}
+.rm-desktop li a:hover,
+.rm-desktop li.current-menu-item a {
+  text-decoration: underline;
+}
+.rm-desktop li a {
+  color: inherit;
+  background-color: inherit;
+}
+.rm-desktop li a:hover {
+  color: inherit;
+  background-color: inherit;
+}
+.rm-desktop li:hover > ul {
+  left: 0;
+}
+.rm-desktop li:hover > ul.rm-submenu-level-1 {
+  left: auto;
+  left: 30%;
+}
+.rm-desktop li .rm-submenu-button {
+  display: none;
+}
+/**
+ * Menu layout for the mobile variant, usually for mobile screens.
+ */
+.rm-mobile {
+  width: 100%;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+  background-color: #444;
+  color: #fff;
+}
+.rm-mobile a {
+  color: inherit;
+}
+.rm-mobile li {
+  display: block;
+  box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.4);
+  /*        // Header of submenu is closed
+        //&.sub-menu, // For WordPress menu generating
+        &.rm-submenu > a:before {
+            content: "\f0d7";
+        }
+
+        // Header of submenu is opened
+        &.rm-submenu-open > a:before {
+            content: "\f0d8";
+        }
+*/
+}
+.rm-mobile li.rm-submenu-open > ul {
+  position: relative;
+  left: 0;
+}
+/**
+ * Menu layout for the max variant, for mobile screens and complete menues.
+ * Swipe from right by default.
+ */
+.rm-max.rm-navbar {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+}
+.rm-max .rm-small {
+  display: block;
+}
+.rm-max .rm-small .rm-button {
+  color: inherit;
+}
+.rm-max .rm-small .rm-button.rm-clicked {
+  color: #9FB129;
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  z-index: 999;
+}
+.rm-max .rm-mobile {
+  transition: all 0.15s linear;
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  transform: translateX(100%);
+  width: 500px;
+  max-width: 500px;
+  height: 500px;
+  overflow-y: auto;
+  padding-top: 72px;
+  background-color: #131313;
+  /* Color when menu item is clicked */
+  /* Button for submenu */
+  /* Style for submenu */
+}
+.rm-max .rm-mobile li a:active {
+  background-color: transparent;
+}
+.rm-max .rm-mobile.rm-clicked {
+  transform: translateX(0);
+}
+.rm-max .rm-mobile a:hover {
+  text-decoration: underline;
+}
+.rm-max .rm-mobile .rm-submenu-button {
+  float: right;
+  box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.4);
+  background-color: #444;
+  padding: 8px 24px;
+  margin-right: 8px;
+  margin-top: 10px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+.rm-max .rm-mobile .rm-submenu-button:after {
+  content: "\25BC";
+}
+.rm-max .rm-mobile .rm-submenu-button:hover {
+  text-decoration: none;
+  background-color: #ccc;
+}
+.rm-max .rm-mobile li ul {
+  padding-left: 8px;
+}
+.rm-max .rm-mobile .rm-submenu-open > .rm-submenu-button:after {
+  content: "\25B2";
+}
+.rm-max.rm-swipe-left .rm-mobile {
+  left: 0;
+}
+.rm-max.rm-swipe-right .rm-mobile {
+  right: 0;
+}
 /**
  * Font Awesome.
  */
@@ -4754,10 +4989,17 @@ html {
 }
 body {
   margin: 0 auto;
-  padding: 1em;
   color: #fff;
   font: 100.01%/1 sans-serif;
-  border: 2px solid #b3b3ff;
+}
+img {
+  max-width: 100%;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
 }
 a {
   text-decoration: underline;
@@ -4766,21 +5008,24 @@ a:link {
   color: #fff;
 }
 a:visited {
-  color: #b3b3ff;
+  color: #ddd;
 }
 a:hover {
   background-color: #00f;
 }
-.region-main {
+.article {
   padding: 1em;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }
-.site-footer {
+.block {
+  padding: 0 1em;
+}
+.author-byline {
   padding: 1em;
 }
 .footer-column-x {
-  border: 1px solid #b3b3ff;
   margin: 1em 0.5em;
-  padding: 0 1em;
 }
 .footer-column-1 {
   margin-left: 1em;
@@ -4803,13 +5048,89 @@ a:hover {
  * General layout
  */
 .inner-wrap {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
-  border: 1px solid #b3b3ff;
+}
+/**
+ * Header layout
+ */
+.site-logo {
+  display: none;
+}
+.outer-wrap-header {
+  min-height: 48px;
+}
+.outer-wrap-header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.region-header-col-2 {
+  width: 60%;
+  float: left;
+  text-align: center;
+}
+.region-header-col-1,
+.region-header-col-3 {
+  width: 20%;
+  float: left;
+}
+.region-flash {
+  background-color: #ddd;
+}
+/**
+ * Main content
+ */
+.next {
+  float: right;
+}
+.previous {
+  float: left;
+}
+/**
+ * Main and sidebars layout
+ */
+.region-main,
+.region-sidebar-left,
+.region-sidebar-right {
+  overflow: auto;
+}
+.region-main {
+  float: left;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.region-main.has-sidebar {
+  width: 70%;
+  margin-left: 0;
+  margin-right: 0;
+}
+.region-main.has-sidebar-left.has-sidebar-right {
+  width: 60%;
+  margin-left: 0;
+  margin-right: 0;
+}
+.inner-wrap-main::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.region-sidebar-right,
+.region-sidebar-left {
+  width: 30%;
+  float: left;
+}
+.region-sidebar-right.has-sidebar-left,
+.region-sidebar-left.has-sidebar-right {
+  width: 20%;
 }
 /**
  * Footers
  */
+.region-footer {
+  border-top: 1px solid #ddd;
+  margin-top: 1em;
+}
 .footer-column {
   width: 33%;
   float: left;
@@ -4817,9 +5138,84 @@ a:hover {
 /**
  * Layout for responsive style through media queries.
  */
-@media screen and (max-width: 1500px) {
-  .site-logo {
+/*
+ *  @media screen and (max-width: 1500px) {
+ *  .site-logo {
+ *      display: none;
+ *  }
+ *}
+ */
+/**
+ * Navbar
+ */
+@media screen and (max-width: 1000px) {
+  .rm-desktop a {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .region-header-col-1,
+  .region-header-col-3 {
+    width: 20%;
+  }
+  .region-main.has-sidebar {
+    width: 80%;
+  }
+  .region-main.has-sidebar-left.has-sidebar-right {
+    width: 70%;
+  }
+  .region-sidebar-left,
+  .region-sidebar-right {
+    width: 20%;
+  }
+  .region-sidebar-right.has-sidebar-left,
+  .region-sidebar-left.has-sidebar-right {
+    width: 15%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .region-header-col-1,
+  .region-header-col-3 {
+    width: 15%;
+  }
+  .region-header-col-2 {
+    width: 70%;
+  }
+  .region-header-col-1 {
     display: none;
+  }
+  .region-main.has-sidebar {
+    width: 80%;
+  }
+  .region-main.has-sidebar-left.has-sidebar-right {
+    width: 80%;
+  }
+  .region-sidebar-left,
+  .region-sidebar-right {
+    width: 20%;
+  }
+  .region-sidebar-right.has-sidebar-left {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .rm-desktop {
+    display: none;
+  }
+  .region-main.has-sidebar {
+    width: 100%;
+  }
+  .region-main.has-sidebar-left.has-sidebar-right {
+    width: 100%;
+  }
+  .region-sidebar-left,
+  .region-sidebar-right {
+    width: 100%;
+  }
+  .region-sidebar-left.has-sidebar-right {
+    width: 100%;
+  }
+  .region-sidebar-right.has-sidebar-left {
+    width: 100%;
   }
 }
 /**
@@ -4854,252 +5250,8 @@ a:hover {
   color: #111;
 }
 /**
- * A responsive menu.
- */
-/**
- * Style for responsive menu
- */
-/**
- * Outer wrapper for menu
- */
-.rm-navbar {
-  position: relative;
-}
-.rm-navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-/**
- * Avoid scrolling mobile devices
- * OBSOLETE?
- */
-/**
- * Meny layout for the small buttonized menu.
- */
-.rm-small {
-  display: none;
-  float: right;
-}
-a.rm-button {
-  display: inline-block;
-  color: inherit;
-  background-color: transparent;
-  outline: none;
-}
-a.rm-button:active {
-  color: inherit;
-  background-color: transparent;
-}
-a.rm-button .rm-button-face-1 {
-  position: absolute;
-  transition: color 0.1s ease;
-}
-a.rm-button .rm-button-face-2 {
-  position: relative;
-  color: transparent;
-  transition: color 0.1s ease;
-}
-a.rm-button.rm-clicked {
-  color: #9FB129;
-  background-color: transparent;
-}
-a.rm-button.rm-clicked .rm-button-face-1 {
-  color: transparent;
-}
-a.rm-button.rm-clicked .rm-button-face-2 {
-  z-index: 2;
-  color: inherit;
-}
-/**
- * Standard meny layout, valid for any subtype.
- */
-.rm-default li {
-  display: inline-block;
-}
-.rm-default li li {
-  display: block;
-  min-width: 10em;
-}
-.rm-default a {
-  display: block;
-  text-decoration: none;
-  white-space: nowrap;
-  padding: 1em;
-  outline: none;
-}
-.rm-default ul {
-  position: absolute;
-  z-index: 9999;
-  left: -9999px;
-}
-.rm-default ul.rm-show-submenu {
-  left: 0;
-}
-.rm-default ul li {
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
-}
-.rm-default ul ul {
-  left: -9999px;
-}
-/**
- * Menu layout for the desktop variant, usually full width of browser.
- */
-.rm-desktop ul {
-  background-color: inherit;
-}
-.rm-desktop li {
-  position: relative;
-}
-.rm-desktop li a:hover,
-.rm-desktop li.current-menu-item a {
-  text-decoration: underline;
-}
-.rm-desktop li a {
-  color: inherit;
-  background-color: inherit;
-}
-.rm-desktop li a:hover {
-  color: inherit;
-  background-color: inherit;
-}
-.rm-desktop li:hover > ul {
-  left: 0;
-}
-.rm-desktop li:hover > ul.rm-submenu-level-1 {
-  left: auto;
-  left: 30%;
-}
-.rm-desktop li .rm-submenu-button {
-  display: none;
-}
-/**
- * Menu layout for the mobile variant, usually for mobile screens.
- */
-.rm-mobile {
-  width: 100%;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
-  background-color: #444;
-  color: #fff;
-}
-.rm-mobile a {
-  color: inherit;
-}
-.rm-mobile li {
-  display: block;
-  box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.4);
-  /*        // Header of submenu is closed
-        //&.sub-menu, // For WordPress menu generating
-        &.rm-submenu > a:before {
-            content: "\f0d7";
-        }
-
-        // Header of submenu is opened
-        &.rm-submenu-open > a:before {
-            content: "\f0d8";
-        }
-*/
-}
-.rm-mobile li.rm-submenu-open > ul {
-  position: relative;
-  left: 0;
-}
-/**
- * Menu layout for the max variant, for mobile screens and complete menues.
- * Swipe from right by default.
- */
-.rm-max.rm-navbar {
-  position: absolute;
-  top: 16px;
-  right: 24px;
-}
-.rm-max .rm-small {
-  display: block;
-}
-.rm-max .rm-small .rm-button {
-  color: inherit;
-}
-.rm-max .rm-small .rm-button.rm-clicked {
-  color: #9FB129;
-  position: fixed;
-  top: 16px;
-  right: 24px;
-  z-index: 999;
-}
-.rm-max .rm-mobile {
-  transition: all 0.15s linear;
-  position: fixed;
-  z-index: 998;
-  top: 0;
-  transform: translateX(100%);
-  width: 500px;
-  max-width: 500px;
-  height: 500px;
-  overflow-y: auto;
-  padding-top: 72px;
-  background-color: #131313;
-  /* Color when menu item is clicked */
-  /* Button for submenu */
-  /* Style for submenu */
-}
-.rm-max .rm-mobile li a:active {
-  background-color: transparent;
-}
-.rm-max .rm-mobile.rm-clicked {
-  transform: translateX(0);
-}
-.rm-max .rm-mobile a:hover {
-  text-decoration: underline;
-}
-.rm-max .rm-mobile .rm-submenu-button {
-  float: right;
-  box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.4);
-  background-color: #444;
-  padding: 8px 24px;
-  margin-right: 8px;
-  margin-top: 10px;
-  border-radius: 5px;
-  position: relative;
-  z-index: 1;
-}
-.rm-max .rm-mobile .rm-submenu-button:after {
-  content: "\25BC";
-}
-.rm-max .rm-mobile .rm-submenu-button:hover {
-  text-decoration: none;
-  background-color: #ccc;
-}
-.rm-max .rm-mobile li ul {
-  padding-left: 8px;
-}
-.rm-max .rm-mobile .rm-submenu-open > .rm-submenu-button:after {
-  content: "\25B2";
-}
-.rm-max.rm-swipe-left .rm-mobile {
-  left: 0;
-}
-.rm-max.rm-swipe-right .rm-mobile {
-  right: 0;
-}
-/**
- * Style for responsive menu
- */
-/**
-  * Example on media queries
-  */
-@media screen and (max-width: 680px) {
-  .rm-small {
-    display: block;
-  }
-  .rm-desktop {
-    display: none;
-  }
-}
-@media screen and (min-width: 680px) {
-  .rm-small {
-    display: none;
-  }
-}
-/**
  * My own settings, not currently in their own module.
  */
+.outer-wrap-main {
+  line-height: 1.6;
+}

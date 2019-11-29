@@ -16,5 +16,10 @@ v. 1.0.2
 --------
 
 * Converting CSS-theme to LESS:
-* Scetch up of the first LESS-based stylesheet.
+* Scetch up of the first LESS-based stylesheet, called "Blue print".
 
+v. 1.0.5
+--------
+
+* Working on theme "Blue print".
+* Error checking and comparing to specs.

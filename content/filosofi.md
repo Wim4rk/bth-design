@@ -2,6 +2,22 @@
 title: "Tankar"
 
 views:
+    ambition:
+        region: sidebar-left
+        template: anax/v2/block/default
+        data:
+            meta:
+                type: single
+                route: block/om-ambition
+                
+    kursrepo:
+        region: sidebar-right
+        template: anax/v2/block/default
+        data:
+            meta:
+                type: single
+                route: block/om-kursrepo
+
     byline:
         region: main
         template: anax/v2/block/default

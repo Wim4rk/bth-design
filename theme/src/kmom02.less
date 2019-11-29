@@ -6,6 +6,15 @@
  * And now we're using LESS, which is more.
  */
 
+/**
+ * Import mixins.
+ */
+
+@import "mixin/clearfix.less";
+
+.clearfix() {
+    #design-mixin.clearfix();
+}
 
 /**
  * Normalize style.
@@ -20,16 +29,21 @@
 @bgColorHtml: #194a96;
 @bgColorBody: @bgColorHtml;
 @bodyColor: #fff;
-@lineColor: #b3b3ff;
+@lineColor: #ddd;
 @textContrast: #00f;
 
 @fontFamilyBody: sans-serif;
+
 /**
  * Internal self contained modules, save in directory module/.
  */
-
 @import "module/stylechooser.less";  
 
+/**
+ * A responsive menu.
+ */
+@import "@desinax/responsive-menu/less/responsive-menu.less";
+//@import "@desinax/responsive-menu/less/media-queries.less";
 
 /**
  * Font Awesome.
@@ -59,14 +73,10 @@
 @import "layout/regions.less";     // To add style for ?regions
 
 
-/**
- * A responsive menu.
- */
-
-@import "@desinax/responsive-menu/less/responsive-menu.less";
-@import "@desinax/responsive-menu/less/media-queries.less";
 
 /**
  * My own settings, not currently in their own module.
  */
-
+.outer-wrap-main {
+    line-height: 1.6;
+}

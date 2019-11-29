@@ -9,10 +9,21 @@ html {
 
 body {
     margin: 0 auto;
-    padding: 1em;
+    //padding: 1em;
     color: @bodyColor;
     font: 100.01%/1 @fontFamilyBody;
-    border: 2px solid @lineColor;
+}
+
+img {
+    max-width: 100%;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
 }
 
 a {
@@ -31,18 +42,22 @@ a:hover {
     background-color: @textContrast;
 }
 
-.region-main {
-	padding: 1em;
+.article {
+    padding: 1em;
+    border-right: 1px solid @lineColor;
+    border-left: 1px solid @lineColor;
 }
 
-.site-footer {
-	padding: 1em;
+.block {
+    padding: 0 1em;
+}
+
+.author-byline{
+    padding: 1em;
 }
 
 .footer-column-x {
-	border: 1px solid @lineColor;
 	margin: 1em 0.5em;
-	padding: 0 1em;
 }
 
 .footer-column-1 {
