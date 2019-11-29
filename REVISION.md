@@ -23,3 +23,8 @@ v. 1.0.5
 
 * Working on theme "Blue print".
 * Error checking and comparing to specs.
+
+v. 2.0.2
+--------
+
+* Kmom02 is done.
