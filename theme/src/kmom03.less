@@ -1,0 +1,189 @@
+/*!
+ * __Piet__
+ * Stylesheet for kmom03.
+ *
+ * This stylesheet is for the design course and kmom03.
+ * Piet stands for Piet Mondrian, a true master using
+ * the grid in art.
+ */
+
+/**
+ * Import mixins.
+ */
+
+@import "mixin/clearfix.less";
+
+.clearfix() {
+    #design-mixin.clearfix();
+}
+
+/**
+ * Normalize style.
+ */
+
+@import "normalize.css/normalize.less";
+
+/**
+ * Variables (valid throughout)
+ */
+
+
+/**
+ * Internal self contained modules, save in directory module/.
+ */
+@import "module/stylechooser.less";
+
+/**
+ * A responsive menu.
+ */
+@import "@desinax/responsive-menu/less/responsive-menu.less";
+//@import "@desinax/responsive-menu/less/media-queries.less";
+
+/**
+ * Font Awesome.
+ */
+
+@import "@fortawesome/fontawesome-free/less/fontawesome.less";
+@import "@fortawesome/fontawesome-free/less/solid.less";
+@import "@fortawesome/fontawesome-free/less/brands.less";
+
+
+/**
+ * Import the typographic grid.
+ */
+@import "@desinax/typographic-grid/less/typography-font-families.less";
+@import "@desinax/typographic-grid/less/typography-defaults.less";
+
+
+
+// Magic number and base fontsize
+@magicNumber:  24px;  // 22px
+@fontSizeBody: 18px;
+
+
+// Activate grid and affect all typographic elements
+#desinax-hgrid.activateDefaultTypography();
+
+// Show the grid
+.hgrid .inner-wrap {
+    @gridImage: "../img/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+}
+
+/*
+ * Base style to affect HTML elements on a general scale.
+ *
+ */
+
+@import "base/base-piet.less";
+
+
+/**
+ * Import the vertical grid.
+ */
+@import "@desinax/vertical-grid/less/grid.less";
+@import "layout/v-grid.less";
+
+// Default grid, change to fit your requirements.
+@columnWidth:   30;
+@gutterWidth:   10;
+@columns:       24;
+@gridType:      "float"; // "flex"
+
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+
+//@import "layout/layout.less";
+//@import "layout/responsive.less";
+@import "layout/regions.less";     // To add style for ?regions
+
+
+
+/**
+ * My own settings, not currently in their own module.
+ */
+
+.outer-wrap-main {
+    line-height: @magicNumber;
+}
+
+.right {
+    float: right;
+}
+
+// Adapt the typography
+@fontFamilyBody:        @fontFamilyCambria;
+@fontFamilyHeadings:    @fontFamilyHelveticaNeue;
+// @fontFamilyCode:     "monospace";
+
+
+
+// header h1-h6 font sixe
+@fontSizeH1: 1.5em;
+@fontSizeH2: 1.375em;
+@fontSizeH3: 1.25em;
+@fontSizeH4: 1.125em;
+@fontSizeH5: 1em;
+@fontSizeH6: 1em;
+
+@borderSizeH1: 0;
+@borderSizeH2: 1px;
+@borderSizeH3: 1px;
+
+ul {
+    line-height: @magicNumber;
+}
+
+.my-navbar ul {
+    background-color: #fff;
+    list-style-position: inside;
+    padding: 0;
+    border: none;
+}
+
+.region-breadcrumb {
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb-list ul {
+    list-style: none;
+    margin-bottom: @magicNumber;
+    padding-left: 0.3em;
+}
+
+.breadcrumb-list ul li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb-list li+li:before {
+    content: "/\00a0";
+}
+
+.breadcrumb-list li a {
+    text-decoration: none;
+}
+
+.breadcrumb-list li a:hover {
+    text-decoration: underline;
+}
+
+.next-previous {
+    margin-bottom: @magicNumber;
+}
+
+.next {
+    float: right;
+}
+
+.previous {
+    float: left;
+}
+
+.left {
+    float: left;
+}
