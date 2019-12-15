@@ -1,6 +1,6 @@
 /**
-Layout using v-grid
-*/
+ *Layout using v-grid
+ */
 
 /**
  * Layout style for general structure of header, navbar, main, footer
@@ -17,24 +17,22 @@ Layout using v-grid
 
 .row {
      #desinax-vgrid.row();
-     //background-color: #0f0;
-     //margin-bottom: 12px;
 }
+
 
 .inner-wrap {
-    #desinax-vgrid.grid(900px);
-    //max-width: 1000px;
-    //margin: 0 auto;
+   #desinax-vgrid.grid(1100px);
 }
 
+
 .inner-wrap-header {
-    #desinax-vgrid.grid(100%);
+   #desinax-vgrid.grid(100%);
 }
 
 .vgrid .inner-wrap {
     @gridImage: "../img/grid_24x30x10-nomargin.png";
     //@gridImage: "../../img/grid_12x60x20-nomargin.png";
-    #desinax-vgrid.showGrid(@gridImage, 1000px);
+    #desinax-vgrid.showGrid(@gridImage, 1100px);
 
     &.inner-wrap-header {
         #desinax-vgrid.showGrid(@gridImage);
@@ -44,152 +42,182 @@ Layout using v-grid
 /**
  * Header layout
  */
+
 .site-logo {
     display: none;
 }
 
-
-// .inner-wrap-header,
-// .inner-wrap-footer {
-//     #desinax-vgrid.grid(100%);
-// }
-
-.outer-wrap-header {
-    //min-height: 48px;
-    //.clearfix();
-}
-
-.region-header-col-2 {
-    #desinax-vgrid.column(14);
-    //width: 60%;
-    //float: left;
-    text-align: center;
-}
-
-.region-header-col-1,
-.region-header-col-3 {
-    #desinax-vgrid.column(5);
-    //width: 20%;
-    //float: left;
-}
-
 .region-flash {
     #desinax-vgrid.column(@columns);
+}
+
+.region-flash img {
+    width: 100%;
 }
 
 .region-breadcrumb {
     #desinax-vgrid.column(@columns);
 }
 
-.region-flash {
-    background-color: #eee;
-}
-
-/**
- * Main content
- */
-.next {
-    //float: right;
-}
-
-.previous {
-    //float: left;
-}
 
 .left {
     float: left;
 }
 
 .author-byline {
-    border: 1px solid #ccc;
+    border: 1px solid #aaa;
 }
+
+.region-footer {
+    border-top: 1px solid #aaa;
+    #desinax-vgrid.column(@columns);
+}
+
+/* .site-footer {
+ *  #desinax-vgrid.column(@columns);
+ * }
+ */
 
 /**
  * Main and sidebars layout
  */
 
-.region-main {
-    #desinax-vgrid.column(@columns * 3 / 4);
-    #desinax-vgrid.push(3);
+@media screen and (max-width: 860px) {
 
-    &.has-sidebar {
-        #desinax-vgrid.push(0);
+    .my-navbar {
+        display: none;
     }
 
-    &.has-sidebar-right {
-        #desinax-vgrid.column(@columns * 3 / 4 - 1);
+    .region-main {
+        #desinax-vgrid.column(@columns);
     }
 
-    &.has-sidebar-left.has-sidebar-right {
-        #desinax-vgrid.column(@columns - 10);
+    .region-sidebar-right {
+        #desinax-vgrid.column(@columns);
+    }
+
+    .region-sidebar-left {
+        #desinax-vgrid.column(@columns);
     }
 }
 
-.region-sidebar-right,
-.region-sidebar-left {
-    #desinax-vgrid.column(@columns * 1 / 4);
+@media screen and (min-width: 860px) {
+    .my-navbar {
+        display: inherit;
+    }
+
+    .rm-desktop a {
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+    }
+
+    .region-header-col-2 {
+        #desinax-vgrid.column(@columns);
+        text-align: center;
+
+    }
+
+
+    .region-header-col-1,
+    .region-header-col-3 {
+        display: none;
+    }
+
+    /*
+     * MAIN
+     */
+
+    .region-sidebar-right,
+    .region-sidebar-left {
+        #desinax-vgrid.column(@columns * 1 / 3);
+    }
+
+    .region-main {
+        #desinax-vgrid.column(@columns * 2 / 3);
+        #desinax-vgrid.push(@columns * 1 / 6);
+
+        &.has-sidebar-right {
+            #desinax-vgrid.push(0);
+        }
+
+        &.has-sidebar-left {
+            #desinax-vgrid.push(1);
+        }
+    }
+
+    .region-sidebar-right.has-sidebar-left {
+        #desinax-vgrid.column(@columns);
+    }
+
+    .region-sidebar-left.has-sidebar-right {
+        #desinax-vgrid.column(@columns * 1 / 4 - 1)
+    }
+
 }
 
-.region-sidebar-right {
-    #desinax-vgrid.push(1);
+@media screen and (min-width: 992px) {
+
+    .rm-desktop a {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+ 
+    .region-header-col-2 {
+        #desinax-vgrid.column(14);
+        text-align: center;
+    }
+
+    .region-header-col-1,
+    .region-header-col-3 {
+        #desinax-vgrid.column(5);
+        display: inherit;
+    }
+
+    .region-main {
+        #desinax-vgrid.column(@columns * 2 / 3);
+        #desinax-vgrid.push(@columns * 1 / 6);
+
+        &.has-sidebar-right {
+            #desinax-vgrid.column(@columns * 3 / 4 - 1);
+            #desinax-vgrid.push(0);
+        }
+
+        &.has-sidebar-left {
+            #desinax-vgrid.push(1);
+        }
+
+        &.has-sidebar-left.has-sidebar-right {
+            #desinax-vgrid.column(@columns * 2 / 4 - 1);
+            #desinax-vgrid.push(1);
+        }
+    }
+
+    .region-sidebar-right,
+    .region-sidebar-left {
+        #desinax-vgrid.column(@columns * 1 / 4);
+    }
+
+    .region-sidebar-right.has-sidebar-left {
+        #desinax-vgrid.push(1);
+    }
+
+    .region-sidebar-right.has-sidebar-left,
+    .region-sidebar-left.has-sidebar-right {
+        #desinax-vgrid.column(@columns * 1 / 4 - 1);
+    }
+
+    /**
+     * Footers
+     */
+
+    .footer-column {
+        #desinax-vgrid.column(@columns / 3);
+    }
 }
 
-.region-sidebar-right.has-sidebar-left,
-.region-sidebar-left.has-sidebar-right {
-    #desinax-vgrid.column(@columns * 1 / 4 - 1);
-}
-
-/**
- * Responsive 1, 2, 3
- */
-
- @media screen and (max-width: 1000px) {
-     .region-main {
-         #desinax-vgrid.column(@columns);
-
-         &.has-sidebar-left.has-sidebar-right {
-             #desinax-vgrid.column(@columns - 10);
-         }
-     }
-
-     .region-sidebar-left {
-         #desinax-vgrid.column(@columns);
-     }
-
-     .region-sidebar-right.has-sidebar-left,
-     .region-sidebar-left.has-sidebar-right {
-         #desinax-vgrid.column(@columns);
-     }
- }
-
- @media screen and (max-width: 700px) {
-     .region-main.has-sidebar-right {
-             #desinax-vgrid.column(@columns);
-     }
-
-     .region-sidebar-right {
-         //display: none;
-         #desinax-vgrid.column(@columns);
-         #desinax-vgrid.push(0);
-     }
- }
-
-/**
- * Footers
- */
-.region-footer {
-    border-top: 1px solid #aaa;
-    //margin-top: 1em;
-}
-
-.footer-column {
-    #desinax-vgrid.column(@columns / 3);
-    //width: 33%;
-    //float: left;
-}
-
-.site-footer {
-    #desinax-vgrid.column(@columns);
-    //width: 33%;
-    //float: left;
+@media screen and (min-width: 1128px) {
+    .rm-desktop a {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
 }
