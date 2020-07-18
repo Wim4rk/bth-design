@@ -19,8 +19,12 @@
 /**
  * Header layout
  */
-.site-logo {
-    display: none;
+// .site-logo {
+//     display: none;
+// }
+
+.site-logo-text {
+    visibility: hidden;
 }
 
 .outer-wrap-header {
@@ -38,6 +42,10 @@
 .region-header-col-3 {
     width: 20%;
     float: left;
+}
+
+.region-header-col-1 {
+    visibility: hidden;
 }
 
 .region-flash {
@@ -69,13 +77,13 @@
     float: left;
     margin-left: 1em;
     margin-right: 1em;
-    
+
     &.has-sidebar {
         width: 70%;
         margin-left: 0;
         margin-right: 0;
     }
-    
+
     &.has-sidebar-left.has-sidebar-right {
         width: 60%;
         margin-left: 0;
@@ -87,13 +95,13 @@
     .clearfix();
 }
 
-.region-sidebar-right, 
+.region-sidebar-right,
 .region-sidebar-left {
     width: 30%;
     float: left;
 }
 
-.region-sidebar-right.has-sidebar-left, 
+.region-sidebar-right.has-sidebar-left,
 .region-sidebar-left.has-sidebar-right {
     width: 20%;
 }

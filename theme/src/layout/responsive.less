@@ -14,10 +14,6 @@
  * Navbar
  */
 @media screen and (max-width: 1000px) {
-    .rm-desktop a {
-        padding-left: 0.5em;
-        padding-right: 0.5em;
-    }
 
     .region-header-col-1,
     .region-header-col-3 {
@@ -44,11 +40,20 @@
     .region-sidebar-left.has-sidebar-right {
         width: 15%;
     }
-}    
+}
 
 
 @media screen and (max-width: 800px) {
-    
+
+    .rm-desktop a {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+    .region-flash {
+        margin-top: 5em;
+    }
+
     .region-header-col-1,
     .region-header-col-3 {
         width: 15%;
@@ -57,11 +62,11 @@
     .region-header-col-2 {
         width: 70%;
     }
-    
+
     .region-header-col-1 {
-        display: none;        
+        display: none;
     }
-    
+
     .region-main {
 
         &.has-sidebar {
@@ -109,6 +114,10 @@
     }
 
     .region-sidebar-right.has-sidebar-left {
+        width: 100%;
+    }
+
+    .region-main img {
         width: 100%;
     }
 }

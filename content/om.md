@@ -4,7 +4,7 @@ views:
         region: sidebar-right
         template: anax/v2/block/default
         data:
-            meta: 
+            meta:
                 type: single
                 route: block/om-kursrepo
 
@@ -12,15 +12,15 @@ views:
         region: sidebar-right
         template: anax/v2/block/default
         data:
-            meta: 
+            meta:
                 type: single
                 route: block/om-redovisa
-                
+
     ambition:
         region: sidebar-right
         template: anax/v2/block/default
         data:
-            meta: 
+            meta:
                 type: single
                 route: block/om-ambition
 
@@ -38,11 +38,12 @@ Om
 =========================
 
 Att måla handlar om en vision, att se bilden innan man sätter den första linjen
-på duken. Därefter handlar det om teknik fram till det ögonblick då man återigen
-jobbar för att förverkliga en vision.
+på duken. Därefter handlar det om teknik att hamna så nära visionen som
+möjligt, innan man omförhandlar visionen med sig själv. Att skapa är cirkulärt.
+
 [FIGURE src=image/tavelram.jpg?w=300 class="right" caption="Att verka inom givna ramar"]
 
-En begränsning i de tillgängliga verktygen främjar ofta själva konsten. Att
+En be&shy;gränsning i de tillgängliga verktygen främjar ofta själva konsten. Att
 planera sin bild är omöjlig om man inte vet hur duken ser ut. Vilka material har
 jag till förfogande? Finns det begränsningar i vilka ferktyg jag får använda?
 
@@ -54,7 +55,7 @@ färger, fler verktyg.
 Design
 ------
 Layouten för en hemsida borde kunna vara hyggligt friställd från kolumner och
-rutor. Om man kan rita det på ett papper borde man kunna sätta det på nätet. 
+rutor. Om man kan rita det på ett papper borde man kunna sätta det på nätet.
 
 Vill man dra historiska paralleller så kan man kika på hur böcker utvecklades
 vid tiden kring Gutenberg. Man gick från vackert illuminerade volymer till

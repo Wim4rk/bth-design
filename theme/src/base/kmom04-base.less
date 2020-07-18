@@ -1,0 +1,151 @@
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+
+
+html {
+    //overflow-y: scroll;
+    background-color: @bgColorHtml;
+}
+
+body {
+    margin: 0;
+    padding: 1em;
+    color: @colorBody;
+    background-color: @bgColorBody;
+    //font: 100.01%/1 @fontFamilyBody;
+    #desinax-hgrid.font(@fontSizeBody);
+}
+
+ul {
+    line-height: @magicNumber;
+    padding-left: 0;
+    list-style: none;
+}
+
+code,
+kbd,
+samp,
+var {
+    display: inline;
+    font-family: @fontFamilyCode;
+    font-style: normal;
+    color: @codeColor;
+    background: @codeBackground;
+    border: @codeBorderColor;
+    padding: 0 0.2em;
+}
+
+code {
+    display: block;
+    white-space: pre-wrap;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: @linkColor;
+}
+
+/* visited link */
+a:visited {
+    color: @linkVisited;
+}
+
+/* mouse over link */
+a:hover {
+    color: @linkHover;
+}
+
+/* selected link */
+a:active {
+    color: @linkSelected;
+}
+
+// Activate grid and affect all typographic elements
+#desinax-hgrid.activateDefaultTypography();
+
+// Build common elements in different versions of this design
+.outer-wrap-flash {
+    display: none;
+}
+
+.inner-wrap-main {
+    border-top: 1px solid @lineColor;
+    padding-top: 1.4em;
+}
+
+.outer-wrap-main {
+    line-height: @magicNumber;
+    margin-bottom: @magicNumber;
+}
+
+.my-navbar ul {
+    background-color: @bgColorBody;
+    list-style-position: inside;
+    padding: 0;
+    border: none;
+}
+
+.region-breadcrumb {
+    margin-left: 0.3em;
+}
+
+.breadcrumb-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.breadcrumb-list ul li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb-list li+li:before {
+    content: "/\00a0";
+}
+
+.breadcrumb-list li a {
+    text-decoration: none;
+}
+
+.breadcrumb-list li a:hover {
+    text-decoration: underline;
+}
+
+ul.toc {
+    list-style-type: none;
+    padding-left: 0;
+    // line-height: @magicNumber;
+}
+
+ul.toc li {
+    margin-bottom: 0.5 * @magicNumber;
+}
+
+.author-byline {
+    padding: 0 1em 0 1em;
+}
+
+.next-previous {
+    margin-bottom: 48px;
+}
+
+.next {
+    float: right;
+}
+
+.previous {
+    float: left;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}

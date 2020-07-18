@@ -1,7 +1,7 @@
 #### Kursrepo
 
-Kursen [Teknisk webbdesign och användbarhet](https://dbwebb.se/kurser/design-v2)
+Kursen [Teknisk webb&shy;design och använd&shy;bar&shy;het](https://dbwebb.se/kurser/design-v2)
 ges vid Blekinge Tekniska högskola. Och vi har riktigt kul!
 
-Om du vill tjuvkika på facit kan du besöka 
-[kursrepot på GitHub](https://github.com/mosbth/designv2).
+Om du vill tjuv&shy;kika på facit kan du besöka
+[kurs&shy;repot på GitHub](https://github.com/mosbth/designv2).

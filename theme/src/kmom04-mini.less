@@ -1,0 +1,46 @@
+/*!
+ * __Judd__
+ * Minimalistic stylesheet for kmom04.
+ *
+ * This stylesheet is for the design course and kmom04.
+ * Judd stands for Donald Judd, a leading theoretican
+ * within minimalism as an artform.
+ */
+
+ @import "module/kmom04.less";
+
+// Adapt the typography
+@fontFamilyBody:     Cambria, Georgia, Times, 'Times New Roman', serif;
+@fontFamilyHeadings: Frutiger, "Frutiger Linotype", Univers, Calibri,
+                     "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad,
+                     "DejaVu Sans Condensed", "Liberation Sans",
+                     "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue",
+                     Helvetica, Arial, sans-serif;
+@fontFamilyCode:     "Courier New", Courier, monospace;
+
+
+// Set the colours
+@bgColorHtml: #424242;
+@bgColorBody: #fff;
+@colorBody: #333;
+@lineColor: #ccc;
+@codeColor: @colorBody;
+@codeBackground: #eee;
+@codeBorderColor: #424242;
+
+ /* unvisited link */
+@linkColor: #cc4a04;
+
+/* visited link */
+@linkVisited: #cc4a04;
+
+/* mouse over link */
+@linkHover: #ff8000;
+
+/* selected link */
+@linkSelected: #ffb366;
+
+.region-footer {
+    border-top: 1px solid @lineColor;
+    margin-top: 1em;
+}

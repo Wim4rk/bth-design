@@ -35,8 +35,8 @@ return [
             "template" => "anax/v2/header/site_logo",
             "data" => [
                 "class" => "large",
-                "siteLogo"      => "image/theme/leaf_256x256.png",
-                "siteLogoAlt"   => "Löv",
+                "siteLogo"      => "image/theme/wim96x96.png",
+                "siteLogoAlt"   => "Kråka",
             ],
         ],
         [
@@ -44,9 +44,9 @@ return [
             "template" => "anax/v2/header/site_logo_text",
             "data" => [
                 "homeLink"      => "",
-                "siteLogoText"  => "design",
-                "siteLogoTextIcon" => "image/theme/leaf_40x40.png",
-                "siteLogoTextIconAlt" => "Löv-bild",
+                "siteLogoText"  => "Design",
+                "siteLogoTextIcon" => "image/theme/wim32x32.png",
+                "siteLogoTextIconAlt" => "Initialer",
             ],
         ],
         [

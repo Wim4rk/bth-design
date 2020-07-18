@@ -5904,6 +5904,95 @@ hr::after {
  * and other regions of the page including route specific styles.
  */
 /**
+ * Layout for responsive style through media queries.
+ */
+/*
+ *  @media screen and (max-width: 1500px) {
+ *  .site-logo {
+ *      display: none;
+ *  }
+ *}
+ */
+/**
+ * Navbar
+ */
+@media screen and (max-width: 1000px) {
+  .region-header-col-1,
+  .region-header-col-3 {
+    width: 20%;
+  }
+  .region-main.has-sidebar {
+    width: 80%;
+  }
+  .region-main.has-sidebar-left.has-sidebar-right {
+    width: 70%;
+  }
+  .region-sidebar-left,
+  .region-sidebar-right {
+    width: 20%;
+  }
+  .region-sidebar-right.has-sidebar-left,
+  .region-sidebar-left.has-sidebar-right {
+    width: 15%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .rm-desktop a {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .region-flash {
+    margin-top: 5em;
+  }
+  .region-header-col-1,
+  .region-header-col-3 {
+    width: 15%;
+  }
+  .region-header-col-2 {
+    width: 70%;
+  }
+  .region-header-col-1 {
+    display: none;
+  }
+  .region-main.has-sidebar {
+    width: 80%;
+  }
+  .region-main.has-sidebar-left.has-sidebar-right {
+    width: 80%;
+  }
+  .region-sidebar-left,
+  .region-sidebar-right {
+    width: 20%;
+  }
+  .region-sidebar-right.has-sidebar-left {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .rm-desktop {
+    display: none;
+  }
+  .region-main.has-sidebar {
+    width: 100%;
+  }
+  .region-main.has-sidebar-left.has-sidebar-right {
+    width: 100%;
+  }
+  .region-sidebar-left,
+  .region-sidebar-right {
+    width: 100%;
+  }
+  .region-sidebar-left.has-sidebar-right {
+    width: 100%;
+  }
+  .region-sidebar-right.has-sidebar-left {
+    width: 100%;
+  }
+  .region-main img {
+    width: 100%;
+  }
+}
+/**
  * Show off the regions used in the website, to ease styling.
  */
 .regions .outer-wrap {
@@ -5954,7 +6043,7 @@ ul {
   border: none;
 }
 .region-breadcrumb {
-  margin: 0;
+  margin-left: 0.3em;
   padding: 0;
 }
 .breadcrumb-list ul {
