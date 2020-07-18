@@ -103,9 +103,6 @@ body {
  *  }
  *}
  */
-/**
- * Navbar
- */
 @media screen and (max-width: 1000px) {
   .region-header-col-1,
   .region-header-col-3 {
@@ -134,6 +131,9 @@ body {
   .region-flash {
     margin-top: 5em;
   }
+  .outer-wrap-flash {
+    display: none;
+  }
   .region-header-col-1,
   .region-header-col-3 {
     width: 15%;
@@ -142,7 +142,7 @@ body {
     width: 70%;
   }
   .region-header-col-1 {
-    display: none;
+    visibility: hidden;
   }
   .region-main.has-sidebar {
     width: 80%;
@@ -162,6 +162,13 @@ body {
   .rm-desktop {
     display: none;
   }
+  .rm-navbar {
+    border: none;
+  }
+  .region-main {
+    width: 100%;
+    margin: 0;
+  }
   .region-main.has-sidebar {
     width: 100%;
   }
@@ -171,6 +178,7 @@ body {
   .region-sidebar-left,
   .region-sidebar-right {
     width: 100%;
+    margin: 0;
   }
   .region-sidebar-left.has-sidebar-right {
     width: 100%;

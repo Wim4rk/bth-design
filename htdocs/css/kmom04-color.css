@@ -1,9 +1,9 @@
 /*!
- * __IBM 3279__
- * A dark theme for Kmom04.
+ * __Jackson__
+ * Colourful stylesheet for kmom04.
  *
- * This stylesheet is for the design course and kmom04.
- * IBM 3279 was IBM's first color terminal
+ * Jackson Pollock painted in an abstrack expressionistic style,
+ * pouring, splashing and dripping colour over his canvas.
  */
 /**
  * Import mixins.
@@ -5342,7 +5342,7 @@ hr::after {
   visibility: hidden;
 }
 .region-flash {
-  background-color: rgba(150, 255, 150, 0.8);
+  background-color: #103B68;
 }
 /**
  * Main content
@@ -5394,7 +5394,7 @@ hr::after {
  * Footers
  */
 .region-footer {
-  border-top: 1px solid rgba(150, 255, 150, 0.8);
+  border-top: 1px solid #103B68;
   margin-top: 1em;
 }
 .footer-column {
@@ -5405,14 +5405,14 @@ hr::after {
  * Base style to affect HTML elements on a general scale.
  */
 html {
-  background-color: #000;
+  background-color: #424242;
 }
 body {
   margin: 0;
   padding: 1em;
-  color: rgba(150, 255, 150, 0.8);
-  background-color: #000;
-  font: 18px/1.33333333 Inconsolata, "Courier New", Courier, monospace;
+  color: #103B68;
+  background-color: #424242;
+  font: 18px/1.33333333 Cambria, Georgia, Times, 'Times New Roman', serif;
 }
 ul {
   line-height: 24px;
@@ -5426,9 +5426,9 @@ var {
   display: inline;
   font-family: "Courier New", Courier, monospace;
   font-style: normal;
-  color: #f00;
-  background: #ccc;
-  border: #00f;
+  color: #103B68;
+  background: #eee;
+  border: #424242;
   padding: 0 0.2em;
 }
 code {
@@ -5439,19 +5439,19 @@ a {
   text-decoration: none;
 }
 a:link {
-  color: rgba(150, 255, 150, 0.8);
+  color: #CA5A21;
 }
 /* visited link */
 a:visited {
-  color: rgba(150, 255, 150, 0.8);
+  color: #CA5A21;
 }
 /* mouse over link */
 a:hover {
-  color: #fff;
+  color: #FFA171;
 }
 /* selected link */
 a:active {
-  color: #00f;
+  color: #9F3E0D;
 }
 h1,
 h2,
@@ -5741,7 +5741,7 @@ hr::after {
   display: none;
 }
 .inner-wrap-main {
-  border-top: 1px solid rgba(150, 255, 150, 0.8);
+  border-top: 1px solid #103B68;
   padding-top: 1.4em;
 }
 .outer-wrap-main {
@@ -5749,7 +5749,7 @@ hr::after {
   margin-bottom: 24px;
 }
 .my-navbar ul {
-  background-color: #000;
+  background-color: #424242;
   list-style-position: inside;
   padding: 0;
   border: none;
@@ -6239,42 +6239,51 @@ ul.toc li {
 /* visited link */
 /* mouse over link */
 /* selected link */
-body {
-  background-image: radial-gradient(rgba(0, 150, 0, 0.2), black 120%);
-  margin: 0;
-  text-shadow: 0 0 3px #c8c8c8;
-  background-attachment: fixed;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #CA5A21;
 }
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
-  background-attachment: fixed;
-  pointer-events: none;
+.wrap-sidebar {
+  background-color: #FFE89C;
+  border: 0.3em solid #E2BF47;
+  border-radius: 2em;
 }
-a {
-  text-decoration: underline;
+.my-navbar {
+  background-color: #80A4C8;
+  border-radius: 1em;
 }
-a:hover {
-  text-shadow: none;
+.region-main {
+  background-color: #80A4C8;
+  border-radius: 3em;
 }
-code,
-kbd,
-samp,
-var {
-  color: rgba(150, 255, 150, 0.8);
-  background: rgba(110, 255, 110, 0.3);
-  border: 1px solid rgba(150, 255, 150, 0.8);
+.region-main.has-sidebar {
+  margin-left: 0;
+  margin-right: 0;
 }
-::selection {
-  color: #000;
-  background: rgba(150, 255, 150, 0.8);
-  text-shadow: none;
+.region-main.has-sidebar-left.has-sidebar-right {
+  margin-left: 0;
+  margin-right: 0;
+}
+.inner-wrap-main {
+  border-top: none;
+}
+.article {
+  margin: 2em;
+}
+.toc {
+  margin: 6%;
+}
+ul.toc {
+  margin-left: 0;
 }
 .region-footer {
-  border-top: 1px solid rgba(150, 255, 150, 0.8);
+  border-top: 1px solid #103B68;
+}
+.author-byline {
+  float: right;
+  border: 1px solid #103B68;
 }

@@ -5057,9 +5057,6 @@ a:hover {
 .site-logo-text {
   visibility: hidden;
 }
-.outer-wrap-header {
-  min-height: 48px;
-}
 .outer-wrap-header::after {
   content: "";
   display: block;
@@ -5148,9 +5145,6 @@ a:hover {
  *  }
  *}
  */
-/**
- * Navbar
- */
 @media screen and (max-width: 1000px) {
   .region-header-col-1,
   .region-header-col-3 {
@@ -5179,6 +5173,9 @@ a:hover {
   .region-flash {
     margin-top: 5em;
   }
+  .outer-wrap-flash {
+    display: none;
+  }
   .region-header-col-1,
   .region-header-col-3 {
     width: 15%;
@@ -5187,7 +5184,7 @@ a:hover {
     width: 70%;
   }
   .region-header-col-1 {
-    display: none;
+    visibility: hidden;
   }
   .region-main.has-sidebar {
     width: 80%;
@@ -5207,6 +5204,13 @@ a:hover {
   .rm-desktop {
     display: none;
   }
+  .rm-navbar {
+    border: none;
+  }
+  .region-main {
+    width: 100%;
+    margin: 0;
+  }
   .region-main.has-sidebar {
     width: 100%;
   }
@@ -5216,6 +5220,7 @@ a:hover {
   .region-sidebar-left,
   .region-sidebar-right {
     width: 100%;
+    margin: 0;
   }
   .region-sidebar-left.has-sidebar-right {
     width: 100%;

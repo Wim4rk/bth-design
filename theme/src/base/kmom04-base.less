@@ -69,6 +69,7 @@ a:active {
 
 // Build common elements in different versions of this design
 .outer-wrap-flash {
+    // visibility: hidden;
     display: none;
 }
 
@@ -127,11 +128,16 @@ ul.toc li {
 }
 
 .author-byline {
+    width: 50%;
+    font-size: 0.8em;
     padding: 0 1em 0 1em;
+    margin: 0 1em 1em 1em;
+    border-radius: 1em;
+    float: right;
 }
 
 .next-previous {
-    margin-bottom: 48px;
+    margin-bottom: 2 * @magicNumber;
 }
 
 .next {

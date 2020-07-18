@@ -1,0 +1,116 @@
+/*!
+ * __Jackson__
+ * Colourful stylesheet for kmom04.
+ *
+ * Jackson Pollock painted in an abstrack expressionistic style,
+ * pouring, splashing and dripping colour over his canvas.
+ */
+
+@import "module/kmom04.less";
+
+// Adapt the typography
+@fontFamilyBody:     Cambria, Georgia, Times, 'Times New Roman', serif;
+@fontFamilyHeadings: Frutiger, "Frutiger Linotype", Univers, Calibri,
+                     "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad,
+                     "DejaVu Sans Condensed", "Liberation Sans",
+                     "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue",
+                     Helvetica, Arial, sans-serif;
+@fontFamilyCode:     "Courier New", Courier, monospace;
+
+
+// Set the colours
+@bgColorHtml: #424242;
+@bgColorBody: @bgColorHtml;
+@colorBody: #103B68;
+@lineColor: #103B68;
+@headerColor: #CA5A21;
+@codeColor: @colorBody;
+@codeBackground: #eee;
+@codeBorderColor: #424242;
+
+ /* unvisited link */
+@linkColor: #CA5A21;
+
+/* visited link */
+@linkVisited: @linkColor;
+
+/* mouse over link */
+@linkHover: #FFA171;
+
+/* selected link */
+@linkSelected: #9F3E0D;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: @headerColor;
+}
+
+.wrap-sidebar {
+    background-color: #FFE89C;
+    border: 0.3em solid #E2BF47;
+    border-radius: 2em;
+}
+
+.my-navbar {
+    background-color: #80A4C8;
+    // border: .3em solid @lineColor;
+    border-radius: 1em;
+}
+
+.region-main {
+    background-color: #80A4C8;
+    // padding: 2% 4%;
+    border-radius: 3em;
+    // border: 0.3em solid @lineColor;
+    // border-collapse: collapse;
+
+    &.has-sidebar {
+        // width: 60%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    &.has-sidebar-left.has-sidebar-right {
+        // width: 47%;
+        // padding: 2%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    //
+    // &.has-sidebar-left.has-sidebar-right {
+    //     width: 58%;
+    //     margin-left: 0;
+    //     margin-right: 0;
+    // }
+}
+
+.inner-wrap-main {
+    border-top: none;
+}
+
+.article {
+    margin: 2em;
+}
+
+.toc {
+    margin: 6%;
+}
+
+ul.toc {
+    margin-left: 0;
+}
+
+.region-footer {
+    border-top: 1px solid @lineColor;
+    // margin-top: 1em;
+}
+
+.author-byline {
+    float: right;
+    border: 1px solid @lineColor;
+    // border-radius: 3em;
+}
