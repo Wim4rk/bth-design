@@ -49,7 +49,7 @@
 
 // Magic number and base fontsize
 @magicNumber:  24px;  // 22px
-@fontSizeBody: 18px;
+@fontSizeBody: 16px;
 
 
 // Activate grid and affect all typographic elements
@@ -66,31 +66,30 @@
  *
  */
 
-@import "layout/layout.less";
-@import "base/kmom04-base.less";
-@import "layout/responsive.less";
-
-
-/**
+ /**
  * Import the vertical grid.
  */
-@import "@desinax/vertical-grid/less/grid.less";
-@import "layout/v-grid.less";
+ @import "@desinax/vertical-grid/less/grid.less";
+ @import "layout/kmom04-grid.less";
 
-// Default grid, change to fit your requirements.
-@columnWidth:   30;
-@gutterWidth:   10;
-@columns:       24;
-@gridType:      "float"; // "flex"
+
+ // Default grid, change to fit your requirements.
+ @columnWidth:   30;
+ @gutterWidth:   10;
+ @columns:       24;
+ @gridType:      "float"; // "flex"
+
+
+// @import "layout/layout.less";
+@import "base/kmom04-base.less";
+@import "layout/kmom04-responsive.less";
 
 /**
  * Layout style for general structure of header, navbar, main, footer
  * and other regions of the page including route specific styles.
  */
 
-//@import "layout/layout.less";
 @import "layout/regions.less";     // To add style for ?regions
-
 
 
 // Adapt the typography

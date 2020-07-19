@@ -1,0 +1,79 @@
+/**
+ *Layout using v-grid
+ */
+
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+
+/**
+ * Variables
+ */
+
+/**
+ * General layout
+ */
+
+.row {
+     #desinax-vgrid.row();
+}
+
+
+.inner-wrap {
+   #desinax-vgrid.grid(1100px);
+}
+
+
+.inner-wrap-header {
+   #desinax-vgrid.grid(100%);
+}
+
+.vgrid .inner-wrap {
+    @gridImage: "../grid_24x30x10-nomargin.png";
+    //@gridImage: "../../img/grid_12x60x20-nomargin.png";
+    #desinax-vgrid.showGrid(@gridImage, 1100px);
+
+    &.inner-wrap-header {
+        #desinax-vgrid.showGrid(@gridImage);
+    }
+}
+
+/**
+ * Header layout
+ */
+
+.site-logo {
+    display: none;
+}
+
+.region-flash {
+    #desinax-vgrid.column(@columns);
+}
+
+.region-flash img {
+    width: 100%;
+}
+
+.region-breadcrumb {
+    #desinax-vgrid.column(@columns);
+}
+
+
+.left {
+    float: left;
+}
+
+.author-byline {
+    border: 1px solid #aaa;
+}
+
+.region-footer {
+    border-top: 1px solid #aaa;
+    #desinax-vgrid.column(@columns);
+}
+
+/* .site-footer {
+ *  #desinax-vgrid.column(@columns);
+ * }
+ */

@@ -9,7 +9,7 @@ views:
             meta:
                 type: single
                 route: block/om-ambition
-                
+
     kursrepo:
         region: sidebar-right
         template: anax/v2/block/default
@@ -19,7 +19,7 @@ views:
                 route: block/om-kursrepo
 
     byline:
-        region: main
+        region: region-main
         template: anax/v2/block/default
         sort: 2
         data:

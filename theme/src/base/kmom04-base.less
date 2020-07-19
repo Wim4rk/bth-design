@@ -13,7 +13,7 @@ body {
     padding: 1em;
     color: @colorBody;
     background-color: @bgColorBody;
-    //font: 100.01%/1 @fontFamilyBody;
+    // font: 100.01%/1 @fontFamilyBody;
     #desinax-hgrid.font(@fontSizeBody);
 }
 
@@ -73,6 +73,10 @@ a:active {
     display: none;
 }
 
+.region-main {
+    padding-bottom: 1em;
+}
+
 .inner-wrap-main {
     border-top: 1px solid @lineColor;
     padding-top: 1.4em;
@@ -80,7 +84,7 @@ a:active {
 
 .outer-wrap-main {
     line-height: @magicNumber;
-    margin-bottom: @magicNumber;
+    // margin-bottom: @magicNumber;
 }
 
 .my-navbar ul {
@@ -127,8 +131,12 @@ ul.toc li {
     margin-bottom: 0.5 * @magicNumber;
 }
 
+.article {
+    margin: 1em 2em;
+}
+
 .author-byline {
-    width: 50%;
+    // width: 50%;
     font-size: 0.8em;
     padding: 0 1em 0 1em;
     margin: 0 1em 1em 1em;
@@ -137,7 +145,11 @@ ul.toc li {
 }
 
 .next-previous {
-    margin-bottom: 2 * @magicNumber;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 2em;
+    margin-left: 2em;
+    padding-bottom: 1em;
 }
 
 .next {

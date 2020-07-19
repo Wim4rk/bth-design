@@ -1,0 +1,143 @@
+/**
+ * Main and sidebars layout
+ */
+
+@media screen and (max-width: 880px) {
+
+    .my-navbar {
+        display: none;
+    }
+
+    .region-main {
+        #desinax-vgrid.column(@columns);
+    }
+
+    .region-sidebar-right {
+        #desinax-vgrid.column(@columns);
+    }
+
+    .region-sidebar-left {
+        #desinax-vgrid.column(@columns);
+    }
+}
+
+@media screen and (min-width: 880px) {
+    .my-navbar {
+        display: inherit;
+    }
+
+    .rm-desktop a {
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+    }
+
+    .region-header-col-2 {
+        #desinax-vgrid.column(@columns);
+        text-align: center;
+
+    }
+
+
+    .region-header-col-1,
+    .region-header-col-3 {
+        display: none;
+    }
+
+    /*
+     * MAIN
+     */
+
+    .region-sidebar-right,
+    .region-sidebar-left {
+        #desinax-vgrid.column(@columns * 1 / 3);
+    }
+
+    .region-main {
+        #desinax-vgrid.column(@columns * 2 / 3);
+        #desinax-vgrid.push(@columns * 1 / 6);
+
+        &.has-sidebar-right {
+            #desinax-vgrid.push(0);
+        }
+
+        &.has-sidebar-left {
+            #desinax-vgrid.push(1);
+        }
+    }
+
+    .region-sidebar-right.has-sidebar-left {
+        #desinax-vgrid.column(@columns);
+    }
+
+    .region-sidebar-left.has-sidebar-right {
+        #desinax-vgrid.column(@columns * 1 / 4 - 1)
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+
+    .rm-desktop a {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+    .region-header-col-2 {
+        #desinax-vgrid.column(14);
+        text-align: center;
+    }
+
+    .region-header-col-1,
+    .region-header-col-3 {
+        #desinax-vgrid.column(5);
+        display: inherit;
+    }
+
+    .region-main {
+        #desinax-vgrid.column(@columns * 2 / 3);
+        #desinax-vgrid.push(@columns * 1 / 6);
+
+        &.has-sidebar-right {
+            #desinax-vgrid.column(@columns * 3 / 4 - 1);
+            #desinax-vgrid.push(0);
+        }
+
+        &.has-sidebar-left {
+            #desinax-vgrid.push(1);
+        }
+
+        &.has-sidebar-left.has-sidebar-right {
+            #desinax-vgrid.column(@columns * 2 / 4 - 1);
+            #desinax-vgrid.push(1);
+        }
+    }
+
+    .region-sidebar-right,
+    .region-sidebar-left {
+        #desinax-vgrid.column(@columns * 1 / 4);
+    }
+
+    .region-sidebar-right.has-sidebar-left {
+        #desinax-vgrid.push(1);
+    }
+
+    .region-sidebar-right.has-sidebar-left,
+    .region-sidebar-left.has-sidebar-right {
+        #desinax-vgrid.column(@columns * 1 / 4 - 1);
+    }
+
+    /**
+     * Footers
+     */
+
+    .footer-column {
+        #desinax-vgrid.column(@columns / 3);
+    }
+}
+
+@media screen and (min-width: 1128px) {
+    .rm-desktop a {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}

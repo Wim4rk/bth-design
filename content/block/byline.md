@@ -7,12 +7,14 @@
 </figcaption>
 </figure>
 
+<h3>Olov Wimark</h3>
+
 <p>Mångsysslare, eller obeslutsam?</p>
 
 <p>Väl bevandrad i de konstnärliga ämnena med en växande teknisk
 förmåga. Siktet inställt på karriärväxling, så småningom...</p>
 
-<p>Olovs stora dröm är att få tag i en skönskrivare som han kan 
+<p>Olovs stora dröm är att få tag i en skönskrivare som han kan
 använda som printer till sin dator.</p>
 
 </div>
